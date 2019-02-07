@@ -7,8 +7,14 @@ body{
   height: 2000px;
 }
 
+@media (max-width:300px){
+  html{
+    font-size: 1vw;
+  }
+}
+
 h1 {
-  font-size: 60px;
+  font-size: 8vw;
   margin: 30px;
     margin-top: 332px;
     margin-bottom: 586px;
@@ -16,7 +22,7 @@ h1 {
 }
 
 ol {
-  font-size: 20px;
+  font-size: 3vw;
   color: rgb(166, 243, 255);
   font-family: 'Roboto', sans-serif;
   margin: 0px;
@@ -25,7 +31,7 @@ ol {
 .clem {
   text-align: left;
   font-family: 'Roboto', sans-serif;
-  font-size: 40px;
+  font-size: 3vw;
   margin: 54px;
   margin-top: 230px;
   margin-left: 50px;
@@ -35,13 +41,13 @@ ol {
   text-align: right;
   margin: 50px;
   font-family: 'Roboto', sans-serif;
-  font-size: 40px;
+  font-size: 4vw;
 }
 
 .clem2 {
   text-align: left;
   font-family: 'Roboto', sans-serif;
-  font-size: 70px;
+  font-size: 6vw;
   margin: 54px;
   margin-left: 50px;
 }
@@ -49,21 +55,21 @@ ol {
 .joel2{
   text-align: right;
   font-family: 'Roboto', sans-serif;
-  font-size: 40px;
+  font-size: 3vw;
   margin: 54px;
 }
 
 .clem3 {
   text-align: left;
   font-family: 'Roboto', sans-serif;
-  font-size: 40px;
+  font-size: 4vw;
   margin: 54px;
 }
 .joel3 {
   text-align: right;
   font-family: 'Roboto', sans-serif;
-  font-size: 115px;
-  margin: 54px;
+  font-size: 10vw;
+  margin-right:10px;
   transform: skewY(20deg);
     margin-top: 103px;
 }
@@ -71,7 +77,7 @@ ol {
 .should_go {
   text-align: right;
 font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 3vw;
   margin: 54px;
   font-style: italic;
 
@@ -82,43 +88,43 @@ font-family: 'Roboto', sans-serif;
   font-family: 'Roboto', sans-serif;
   font-style: italic;
   transform: skewY(-20deg);
-    font-size: 241px;
+    font-size: 16vw;
     margin: 0;
 }
 .joel4{
   text-align: right;
   font-family: 'Roboto', sans-serif;
   font-size: 30px;
-  margin: 54px;
+  margin: 3vw;
   font-style: italic;
 }
 .clem5{
   text-align: left;
   font-family: 'Roboto', sans-serif;
-  font-size: 81px;
+  font-size: 7vw;
   margin: 54px;
 }
 .joel5 {
   text-align: right;
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 3vw;
   margin: 54px;
 }
 .clem6 {
   text-align: left;
   font-family: 'Roboto', sans-serif;
-  font-size: 50px;
+  font-size: 4vw;
 }
 .joel6 {
   text-align: right;
   font-family: 'Roboto', sans-serif;
-  font-size: 80px;
+  font-size: 5vw;
   margin: 54px;
 }
 .clem7 {
   text-align: left;
   font-family: 'Roboto', sans-serif;
-  font-size: 50px;
+  font-size: 4vw;
   margin: 54px;
   margin-left: 50px;
 }
@@ -126,40 +132,40 @@ font-family: 'Roboto', sans-serif;
 .joel7 {
   text-align: right;
   font-family: 'Roboto', sans-serif;
-  font-size: 35px;
+  font-size: 3vw;
   margin: 54px;
 }
 .clem8{
   text-align: left;
   font-family: 'Roboto', sans-serif;
-  font-size: 50px;
+  font-size: 3.6vw;
   margin: 54px;
   margin-left: 50px;
 }
 .joel8 {
   text-align: right;
   font-family: 'Roboto', sans-serif;
-  font-size: 35px;
+  font-size: 3vw;
   margin: 54px;
 }
 .clem9 {
   text-align: left;
   font-family: 'Roboto', sans-serif;
-  font-size: 40px;
+  font-size: 4vw;
   margin: 54px;
   margin-left: 50px;
 }
 .joel9 {
   text-align: right;
 font-family: 'Roboto', sans-serif;
-  font-size: 35px;
+  font-size: 3vw;
   margin: 54px;
 }
 
 .clem10 {
   text-align: left;
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 2.5vw;
   margin: 54px;
   margin-left: 50px;
 }
@@ -167,46 +173,46 @@ font-family: 'Roboto', sans-serif;
 .joel10 {
   text-align: right;
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 2.5vw;
   margin: 54px;
 }
 .clem11 {
   text-align: left;
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 3vw;
   margin: 54px;
   margin-left: 50px;
 }
 .joel11 {
   text-align: right;
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 3vw;
   margin: 54px;
 }
 .clem12 {
   text-align: left;
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 2vw;
   margin: 54px;
   margin-left: 50px;
 }
 .clem13 {
   text-align: left;
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 2vw;
   margin: 54px;
   margin-left: 50px;
 }
 .joel13 {
   text-align: right;
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 2vw;
   margin: 54px;
 }
 .clem14 {
   text-align: left;
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 2vw;
   font-style: italic;
   margin: 54px;
   margin-left: 50px;
