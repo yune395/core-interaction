@@ -10,9 +10,15 @@ body{
 @media (max-width:300px){
   html{
     font-size: 1vw;
+    background-color: blue;
   }
 }
 
+@media (max-width:100px){
+  html{
+    font-size: 0.5vw;
+  }
+}
 h1 {
   font-size: 8vw;
   margin: 30px;
@@ -94,7 +100,7 @@ font-family: 'Roboto', sans-serif;
 .joel4{
   text-align: right;
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 4vw;
   margin: 3vw;
   font-style: italic;
 }
