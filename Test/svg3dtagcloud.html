@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset='utf-8'>
+    <title>em</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src='js/jquery.svg3dtagcloud.min.js'></script>
+
+    <link href='https://fonts.googleapis.com/css?family=Oswald&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <style type='text/css'>
+
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, font, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            outline: 0;
+            font-size: 2vw;
+            vertical-align: baseline;
+            background: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow: hidden;
+
+        }
+
+        @media (max-width: 600px){
+          html {
+            font-size: 1vw;
+            radius: '70%',
+          }
+        }
+
+    </style>
+
+    <script>
+
+    	$( document ).ready( function() {
+
+            var entries = [
+
+                { label: 'David and Ruth Laskin. Which one you wanna be? I prefer to be Ruth but, I’m flexible.', target: '_top' },
+                { label: 'What do you need?', target: '_top' },
+                { label: 'Ah ha! Alcohol! So, you okay with wine?', target: '_top' },
+                { label: 'I don’t know..', target: '_top' },
+                { label: 'Well, you choose the wine. I’m gonna go find the bedroom and slip into something more.. Ruth. I’m Ruth-less at the moment!', target: '_top' },
+                { label: 'We really should go! I’ve got to catch my ride..', target: '_top' },
+                { label: 'So go!',target: '_top' },
+                { label: 'I did. I thought maybe you were a nut. But you were exciting.', target: '_top' },
+                { label: 'I wish you’d stayed!',target: '_top' },
+                { label: 'I wish I’d stayed too.. Now I wish I stayed. I wish I’d done a lot of things. I wish I’d… I wish I’d stayed, I do.', target: '_top' },
+                { label: 'I came back downstairs and you were gone!', target: '_top' },
+                { label: 'I walked out! I walked out the door.', target: '_top' },
+                { label: 'Why?', target: '_top' },
+                { label: 'I don’t know. I felt like a scared little kid. I was like, it was above my head. I don’t know..', target: '_top' },
+                { label: 'You were scared?', target: '_top' },
+                { label: 'Yeah.. I thought you knew that about me. I ran back to the bonfire, trying to outrun my humiliation.', target: '_top' },
+                { label: 'Was it something I said?', target: '_top' },
+                { label: 'Yeah.. You said, “so go”, with such disdain. You know?', target: '_top' },
+                { label: 'Aw.. I’m sorry.', target: '_top' },
+                { label: 'It’s okay.', target: '_top' },
+                { label: 'Joely?', target: '_top' },
+                { label: 'What if you stayed this time?', target: '_top' },
+                { label: 'CreateJS', target: '_top' },
+                { label: 'I walked out the door... There’s no memory left.', target: '_top' },
+                { label: 'Come back and make up a goodbye at least? Let’s pretend we had one..', target: '_top' },
+                { label: 'Bye, Joel.', target: '_top' },
+                { label: 'I love you.', target: '_top' },
+                { label: 'Meet me in Montauk..', target: '_top' },
+
+            ];
+
+            var settings = {
+
+                entries: entries,
+                width: 1600,
+                height: 1620,
+                radius: '70%',
+                radiusMin: 90,
+                bgDraw: true,
+                bgColor: '#111',
+                opacityOver: 1.00,
+                opacityOut: 0.05,
+                opacitySpeed: 6,
+                fov: 800,
+                speed: 1.5,
+                fontFamily: 'Oswald, Arial, sans-serif',
+                fontSize: '2vw',
+                fontColor: '#fff',
+                fontWeight: 'normal',//bold
+                fontStyle: 'normal',//italic
+                fontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                fontToUpperCase: true,
+                tooltipFontFamily: 'Oswald, Arial, sans-serif',
+                tooltipFontSize: '11',
+                tooltipFontColor: '#fff',
+                tooltipFontWeight: 'normal',//bold
+                tooltipFontStyle: 'normal',//italic
+                tooltipFontStretch: 'normal',//wider, narrower, ultra-condensed, extra-condensed, condensed, semi-condensed, semi-expanded, expanded, extra-expanded, ultra-expanded
+                tooltipFontToUpperCase: false,
+                tooltipTextAnchor: 'left',
+                tooltipDiffX: 0,
+                tooltipDiffY: 10
+
+            };
+
+            //var svg3DTagCloud = new SVG3DTagCloud( document.getElementById( 'holder'  ), settings );
+            $( '#holder' ).svg3DTagCloud( settings );
+
+		} );
+
+    </script>
+
+</head>
+
+<body>
+
+    <div id='holder'></div>
+
+</body>
