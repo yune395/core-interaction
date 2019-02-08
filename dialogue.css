@@ -1,5 +1,5 @@
 html {
-  background-color: #252c41;
+  background-color: black;
 }
 
 
@@ -10,6 +10,7 @@ body{
 @media (max-width:300px){
   html{
     font-size: 1vw;
+    background-color: blue;
   }
 }
 
@@ -28,7 +29,7 @@ h1 {
 
 ol {
   font-size: 3vw;
-  color: #e4e7ec;
+  color: #84B1ED;
   font-family: 'Roboto', sans-serif;
   margin: 0px;
   padding: 0px;
