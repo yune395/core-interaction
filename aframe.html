@@ -4,22 +4,58 @@
     <title>Basic Scene - A-Frame</title>
     <meta name="description" content="Basic Scene - A-Frame">
     <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-click-drag-component"></script>
   </head>
   <body>
+    <div class="bottom">
+		<h1>Seeing the Unseen</h1>
+	</div>
+	<div id="vr-scene"></div>
+
+
+    <script>
+    AFRAME.registerComponent('navigate-on-click', {
+    schema: {
+      url: {default: 'practice2.html'}
+    },
+
+    init: function () {
+      var data = this.data;
+      var el = this.el;
+
+      el.addEventListener('click', function () {
+        window.location.href = data.url;
+      });
+    }
+  });
+
+    </script>
+    <style>
+    .bottom {
+			position: absolute;
+			top: 4000px;
+		}
+    </style>
     <a-scene>
       <a-assets>
         <img id="boxTexture" src="https://cdn.glitch.com/58715503-cf68-4fd0-8f90-27c24424f871%2F000038930016.jpg?1550897191817">
         <img id="sphereTexture" src="https://cdn.glitch.com/58715503-cf68-4fd0-8f90-27c24424f871%2F000038930033.jpg?1550897184064">
         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
         <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
+        <img id="faces" src="https://cdn.glitch.com/353f29b7-9f33-4770-8e76-3cee9a0c6e1a%2F000039010017.jpg?1550982798440">
       </a-assets>
-      <a-box position="0 2 -5" rotation="0 45 45" scale="2 2 2" src="#sphereTexture">
+
+        <a-box position="-5.840 3.052 -5.000" rotation="0 45 45" scale="2 2 2" src="#sphereTexture">
         <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
-          to="0 2.2 -5"></a-animation>
+          to="-5.840 3.052 -5.000"></a-animation>
         <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
         <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
         <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+        <a-box navigate-on-click="url: practice2.html"></a-box>
       </a-box>
+
+<a-plane position="0.000 2.470 0.000" scale="1.410 1.000 1.000" height="5" width="5" src="#faces"
+        material="shader: flat;"></a-plane>
 
       <a-sphere position="9 2 -5" rotation="0 45 45" scale="2 2 2" src="#boxTexture">
         <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
@@ -29,14 +65,14 @@
         <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
       </a-sphere>
 
-      <a-sky height="2048" radius="30" src="#skyTexture" theta-length="90" width="2048"></a-sky>
+      <a-sky height="2048" radius="30" color= "#000000" theta-length="90" width="2048"></a-sky>
       <a-light type="ambient" color="#445451"></a-light>
       <a-light type="point" intensity="2" position="2 4 4"></a-light>
       <a-plane src="#groundTexture" rotation="-90 0 0" height="100" width="100"></a-plane>
-      <a-text value="Seeing the Unseen" color="#BBB" position="-0.9 5 -3" scale="1.5 1.5 1.5"></a-text>
+      <a-text value="Seeing the Unseen" color="#546968" position="-0.520 3.860 -2.910" scale="1.670 1.450 1.950"></a-text>
 
       <a-camera>
-        <a-cursor color="#FAFAFA"></a-cursor>
+        <a-cursor color="#FAFAFA" click="click"></a-cursor>
       </a-camera>
     </a-scene>
   </body>
