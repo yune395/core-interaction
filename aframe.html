@@ -3,8 +3,9 @@
   <head>
     <title>Basic Scene - A-Frame</title>
     <meta name="description" content="Basic Scene - A-Frame">
-    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-click-drag-component"></script>
+    <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script>
   </head>
   <body>
     <div class="bottom">
@@ -16,7 +17,7 @@
     <script>
     AFRAME.registerComponent('navigate-on-click', {
     schema: {
-      url: {default: 'practice2.html'}
+      url: {default: 'practiceframe.html'}
     },
 
     init: function () {
@@ -43,6 +44,7 @@
         <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
         <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg">
         <img id="texture1" src="https://cdn.glitch.com/353f29b7-9f33-4770-8e76-3cee9a0c6e1a%2F68695290-abstract-seamless-moire-pattern-with-waving-curling-lines-graphic-black-and-white-ornament-striped-r.jpg?1551142586691">
+        <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
 
       </a-assets>
 
@@ -64,14 +66,15 @@
           <a-animation attribute="rotation" begin="click" dur="2000" to="180 405 100"></a-animation>
         </a-entity>
 
+        <a-entity position="-4.760 9.960 0" rotation="90.000 0 0" text-geometry="value: SEEING THE UNSEEN; font: #optimerBoldFont;"></a-entity>
 
-        <a-entity position="-6.50 4.350 0.000"
+        <a-entity position="-9.160 6 2.130" src="#texture1"
         geometry="primitive: torusKnot; radius: 1.630; radiusTubular: 0.230;"
-        material="shader: flat; color: #6f30af; src: #texture1;">
+        material="shader: standard; color: #58308a;">
         <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
       </a-entity>
 
-      <a-sphere position="9 12 -5" rotation="0 45 45" scale="2 2 2" src="#boxTexture">
+      <a-sphere position="9 12 -5" rotation="0 45 45" scale="2 2 2" src="#texture1">
         <a-animation attribute="position" direction="alternate" dur="2000" repeat="indefinite"
           to="9 12 -5"></a-animation>
         <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
@@ -80,11 +83,11 @@
 
       </a-sphere>
 
-      <a-sky height="2048" radius="30" color= "#000000" theta-length="90" width="2048"></a-sky>
+      <a-sky height="2048" radius="30" src="" theta-length="90" width="2048"></a-sky>
       <a-light type="ambient" color="#445451"></a-light>
       <a-light type="point" intensity="2" position="2 4 4"></a-light>
       <a-plane src="#groundTexture" rotation="-90 0 0" height="100" width="100"></a-plane>
-      <a-text value="Seeing the Unseen" color="#546968" position="-0.520 3.860 -2.910" scale="1.670 1.450 1.950"></a-text>
+
 
       <a-camera>
         <a-cursor color="#FAFAFA" click="click"></a-cursor>
